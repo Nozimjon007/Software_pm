@@ -96,11 +96,11 @@ class _TrackingScreenState extends State<TrackingScreen> {
   void _checkNotifications(TrackingSimulator sim) {
     final state = context.read<AppState>();
     final route = sim.route;
-    for (var i = 1; i < route.stops.length - 1; i++) {
+    for (var i = 0; i < route.stops.length - 1; i++) {
       final stop = route.stops[i];
       if (_notifiedStops.contains(stop.id)) continue;
-      if (i < sim.nextStopIndex) continue; // already passed
-      final eta = sim.etaMinutes(i);
+      if (i > 0 && i < sim.nextStopIndex) continue; // already passed
+final eta = i == 0 ? NotificationService.leadMinutes.toDouble() : sim.etaMinutes(i);
       if (eta <= NotificationService.leadMinutes) {
         _notifiedStops.add(stop.id);
         final riders = state.ridersAtStop(route.id, stop.id);
