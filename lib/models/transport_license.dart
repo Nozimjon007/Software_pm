@@ -8,6 +8,9 @@ class TransportLicense {
   /// Warn the organizer this many days before expiry.
   static const int warningDays = 30;
 
+  /// Uzbekistan passenger-transport licensing rules.
+  static const String legalReferenceUrl = 'https://lex.uz/docs/-4454419';
+
   const TransportLicense({
     required this.number,
     required this.issuedBy,
