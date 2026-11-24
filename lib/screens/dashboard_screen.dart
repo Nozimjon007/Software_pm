@@ -149,7 +149,8 @@ class DashboardScreen extends StatelessWidget {
             _kv('Expires on', Fmt.date(license.expiresOn)),
             const SizedBox(height: 8),
             const Text(
-              'RideLine warns the organizer 30 days before the license expires (NFR-04).',
+              'RideLine keeps this license on file and warns the organizer 30 days before expiry '
+              '(NFR-04, Uzbekistan transport licensing rules: ${TransportLicense.legalReferenceUrl}).',
               style: TextStyle(color: AppColors.textMuted, fontSize: 12),
             ),
           ],

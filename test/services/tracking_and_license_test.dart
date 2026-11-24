@@ -66,8 +66,17 @@ void main() {
       expiresOn: DateTime(2026, 11, 15),
     );
 
+    test('keeps the legal source link for Uzbekistan transport rules', () {
+      expect(TransportLicense.legalReferenceUrl, 'https://lex.uz/docs/-4454419');
+    });
+
     test('no warning when far from expiry', () {
       expect(license.needsWarning(DateTime(2026, 9, 1)), isFalse);
+    });
+
+    test('warning starts 30 days before expiry', () {
+      expect(license.needsWarning(DateTime(2026, 10, 15)), isFalse); // 31 days
+      expect(license.needsWarning(DateTime(2026, 10, 16)), isTrue); // 30 days
     });
 
     test('warning within 30 days', () {
