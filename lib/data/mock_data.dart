@@ -16,9 +16,7 @@ class Place {
 class MockData {
   MockData._();
 
-  // ----------------------------------------------------------------- places
-  /// Known pickup points in Tashkent the organizer can choose from when
-  /// creating a route (so every stop has map coordinates).
+ 
   static const List<Place> places = [
     Place('Tashkent City Office', 41.3150, 69.2470),
     Place('Chilonzor metro', 41.2753, 69.2040),
