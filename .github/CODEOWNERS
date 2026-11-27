@@ -1,0 +1,21 @@
+# Project management owns files without a more specific area owner.
+* @abdulhafiz0-0
+
+# Design
+/lib/theme/ @SunnatillaRM
+/lib/widgets/ @SunnatillaRM
+
+# Testing
+/test/ @MrMecafano
+/docs/TEST_PLAN.md @MrMecafano
+
+# Backend
+/lib/models/ @MuhammadayubErkinoff
+/lib/data/ @MuhammadayubErkinoff
+/lib/services/ @MuhammadayubErkinoff
+
+# Frontend
+/lib/app.dart @saidmurod217
+/lib/main.dart @saidmurod217
+/lib/screens/ @saidmurod217
+/web/ @saidmurod217
